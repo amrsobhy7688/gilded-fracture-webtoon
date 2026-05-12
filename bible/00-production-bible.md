@@ -4,7 +4,7 @@
 **Style Direction:** Anime-inspired, cinematic, vibrant, luminous, elegant, mystery-forward  
 **Source Basis:** Session notes first, not transcripts  
 **Primary Characters:** Vesper Aurelius and Leo Gray  
-**Working Tagline:** *The Empire does not run on faith alone. It runs on faith and receipts.*
+**Series Tagline:** *The Empire does not run on faith alone. It runs on faith and receipts.*
 
 ---
 
@@ -57,12 +57,11 @@ Gilded Fracture Webtoon Repo
 │  ├─ visual-style-bible.md
 │  ├─ clue-tracker.md
 │  └─ asset-tracker.md
+├─ prologue
+│  └─ P00-the-ledger-and-the-missing-forty-six.md
 ├─ arcs
-│  └─ A01-faith-and-receipts.md
-├─ episodes
-│  ├─ E00-the-ledger-and-the-missing-forty-six.md
-│  ├─ E01-leo-at-the-tea-house.md
-│  └─ E02-vespers-first-day.md
+│  ├─ S01-session-01-opening-investigation.md
+│  └─ S02-session-02-tbd.md
 └─ sources
    ├─ source-session-map.md
    └─ glossary-notes.md
@@ -70,25 +69,27 @@ Gilded Fracture Webtoon Repo
 
 ---
 
-## 4. Season / Arc / Episode Logic
+## 4. Prologue / Session Arc / Episode Logic
 
-Campaign sessions and webtoon episodes will not map one-to-one.
+The **prologue** is separate from the session arcs.
 
-A single D&D session may become:
+It establishes the series-level premise:
 
-- 2 to 5 webtoon episodes if dense.
-- 1 episode if transitional.
-- Part of a larger arc if the thread continues across sessions.
+- The Empire as sacred bureaucracy.
+- The Celestial Ledger.
+- The missing forty-six crystals.
+- The tone of divine order hiding corruption.
 
-The webtoon follows **reader rhythm**, not table-session boundaries.
+Each **campaign session** becomes one **arc file**.
+
+Each session arc contains multiple webtoon episodes as internal sections.
 
 | Unit | Meaning | Example |
 |---|---|---|
-| Season | Large release block | Season 1: The Missing Forty-Six |
-| Arc | Major story movement | Arc 1: Faith and Receipts |
-| Source Session | Original campaign material | Session 1 notes |
-| Webtoon Episode | Published vertical chapter | Episode 3: The Crystal That Sang Wrong |
-| Scroll Section | Internal episode chunk | S03: Cyritium Accounts |
+| Series Prologue | Global premise before Session 1 | P00: The Ledger and the Missing Forty-Six |
+| Session Arc | One campaign session adapted into an arc | S01: Session 01 Opening Investigation |
+| Webtoon Episode | Chapter inside the session arc | S01-E01: Leo at the Tea House |
+| Scroll Section | Internal episode chunk | S01-E01-S03: Leo’s Apartment |
 | Panel Cluster | Micro-scene beat | Stamp montage, clue reveal, thought-reading beat |
 
 ---
@@ -96,35 +97,40 @@ The webtoon follows **reader rhythm**, not table-session boundaries.
 ## 5. Numbering System
 
 ```md
-SE01 = Season 1
-A01 = Arc 1
-SRC-S01 = Campaign Session 1 Notes
-E00 = Episode 0
-E00-S01 = Episode 0, Scroll Section 1
-E00-S01-P001 = Episode 0, Section 1, Panel 1
+P00 = Prologue Episode 0
+S01 = Session Arc 1
+S01-E01 = Session 1, Episode 1
+S01-E01-S01 = Session 1, Episode 1, Scroll Section 1
+S01-E01-S01-P001 = Session 1, Episode 1, Section 1, Panel 1
 ```
 
----
-
-## 6. Episode Index
-
-| Episode | Arc | Source | Status | Main POV | Function | Cliffhanger |
-|---:|---|---|---|---|---|---|
-| E00 | A01 | SRC-S01 | Designed | Omniscient | Empire premise | 46 missing crystals |
-| E01 | A01 | SRC-S01 | Planned | Leo | Felda and Bren leads | Covert case begins |
-| E02 | A01 | SRC-S01 | Planned | Vesper | Aurelian office and assignment | 46 crystals assigned |
-| E03 | A01 | SRC-S01 | Planned | Vesper | Wrong crystal | Orvast signs anyway |
-| E04 | A01 | SRC-S01 | Planned | Vesper | Sun Scouring | Aurelian reads her thoughts |
-| E05 | A01 | SRC-S01 | Planned | Both | Leads connect | Enter Third Junction |
-| E06 | A01 | SRC-S01 | Planned | Both | Body discovered | Cleaner detects them |
-| E07 | A01 | SRC-S01 | Planned | Both | Forged writ | Ledger in briefcase |
-| E08 | A01 | SRC-S01 | Planned | Both | Evidence theft | Cleaner clocks them |
-| E09 | A01 | SRC-S01 | Planned | Both | Cleaned tunnel | CL-A-46-D |
-| E10 | A01 | SRC-S01 | Planned | Split | Vermont packet | Merchant Review access problem |
+This keeps the prologue distinct from the session-derived story.
 
 ---
 
-## 7. Webtoon Compilation System
+## 6. Current Arc Index
+
+| File | Source | Status | Function |
+|---|---|---|---|
+| prologue/P00-the-ledger-and-the-missing-forty-six.md | Session notes prologue | Designed | Series premise |
+| arcs/S01-session-01-opening-investigation.md | SRC-S01 | In Design | Session 1 adaptation arc |
+
+---
+
+## 7. Episode Index Logic
+
+Episodes should be listed inside their parent arc file, not as separate files by default.
+
+Example inside `arcs/S01-session-01-opening-investigation.md`:
+
+| Episode | Source Scene | Main POV | Function | Status |
+|---|---|---|---|---|
+| S01-E01 | Leo at the Tea House | Leo | Introduce Leo and Felda’s hidden note | Planned |
+| S01-E02 | Vesper’s First Day | Vesper | Introduce Vesper’s office and assignment | Planned |
+
+---
+
+## 8. Webtoon Compilation System
 
 Design each episode as:
 
@@ -152,7 +158,7 @@ Practical rule:
 
 ---
 
-## 8. Status Labels
+## 9. Status Labels
 
 | Status | Meaning |
 |---|---|
@@ -167,10 +173,11 @@ Practical rule:
 
 ---
 
-## 9. Change Log
+## 10. Change Log
 
 ### 2026-05-12
 
 - Created GitHub Markdown workspace.
 - Established expandable architecture.
 - Standardized protagonist name as **Leo Gray**.
+- Updated organization model: prologue is separate; each campaign session becomes one arc file; episodes are nested inside arc files.
