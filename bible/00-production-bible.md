@@ -57,9 +57,8 @@ Gilded Fracture Webtoon Repo
 │  ├─ visual-style-bible.md
 │  ├─ clue-tracker.md
 │  └─ asset-tracker.md
-├─ prologue
-│  └─ P00-the-ledger-and-the-missing-forty-six.md
 ├─ arcs
+│  ├─ S00-prologue.md
 │  ├─ S01-session-01-opening-investigation.md
 │  └─ S02-session-02-tbd.md
 └─ sources
@@ -69,26 +68,19 @@ Gilded Fracture Webtoon Repo
 
 ---
 
-## 4. Prologue / Session Arc / Episode Logic
+## 4. Arc / Episode Logic
 
-The **prologue** is separate from the session arcs.
+Every major story block is an **arc file**.
 
-It establishes the series-level premise:
-
-- The Empire as sacred bureaucracy.
-- The Celestial Ledger.
-- The missing forty-six crystals.
-- The tone of divine order hiding corruption.
-
-Each **campaign session** becomes one **arc file**.
-
-Each session arc contains multiple webtoon episodes as internal sections.
+- The **prologue** is Arc `S00`.
+- Each **campaign session** becomes the next arc file: `S01`, `S02`, `S03`, etc.
+- All webtoon episodes live **inside their parent arc file**.
+- The main bible stays readable and global.
 
 | Unit | Meaning | Example |
 |---|---|---|
-| Series Prologue | Global premise before Session 1 | P00: The Ledger and the Missing Forty-Six |
-| Session Arc | One campaign session adapted into an arc | S01: Session 01 Opening Investigation |
-| Webtoon Episode | Chapter inside the session arc | S01-E01: Leo at the Tea House |
+| Arc | Major story block | S00: Prologue, S01: Session 01 Opening Investigation |
+| Webtoon Episode | Chapter inside the arc | S01-E01: Leo at the Tea House |
 | Scroll Section | Internal episode chunk | S01-E01-S03: Leo’s Apartment |
 | Panel Cluster | Micro-scene beat | Stamp montage, clue reveal, thought-reading beat |
 
@@ -97,14 +89,15 @@ Each session arc contains multiple webtoon episodes as internal sections.
 ## 5. Numbering System
 
 ```md
-P00 = Prologue Episode 0
+S00 = Prologue Arc
+S00-E01 = Prologue, Episode 1
 S01 = Session Arc 1
 S01-E01 = Session 1, Episode 1
 S01-E01-S01 = Session 1, Episode 1, Scroll Section 1
 S01-E01-S01-P001 = Session 1, Episode 1, Section 1, Panel 1
 ```
 
-This keeps the prologue distinct from the session-derived story.
+This keeps everything under the arc file structure.
 
 ---
 
@@ -112,7 +105,7 @@ This keeps the prologue distinct from the session-derived story.
 
 | File | Source | Status | Function |
 |---|---|---|---|
-| prologue/P00-the-ledger-and-the-missing-forty-six.md | Session notes prologue | Designed | Series premise |
+| arcs/S00-prologue.md | Session notes prologue | Designed | Series premise |
 | arcs/S01-session-01-opening-investigation.md | SRC-S01 | In Design | Session 1 adaptation arc |
 
 ---
@@ -173,11 +166,30 @@ Practical rule:
 
 ---
 
-## 10. Change Log
+## 10. Deprecated Structure
+
+The following folders/files are deprecated from earlier structure experiments:
+
+```md
+/prologue
+/episodes
+/arcs/A01-faith-and-receipts.md
+```
+
+Going forward, use only:
+
+```md
+/arcs/S00-prologue.md
+/arcs/S01-session-01-opening-investigation.md
+```
+
+---
+
+## 11. Change Log
 
 ### 2026-05-12
 
 - Created GitHub Markdown workspace.
 - Established expandable architecture.
 - Standardized protagonist name as **Leo Gray**.
-- Updated organization model: prologue is separate; each campaign session becomes one arc file; episodes are nested inside arc files.
+- Updated model: the prologue is Arc `S00`; every campaign session becomes an arc file; episodes are nested inside arc files.
