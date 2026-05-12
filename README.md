@@ -20,10 +20,8 @@ A modular Markdown workspace for adapting the **Gilded Fracture** D&D campaign i
   clue-tracker.md
   asset-tracker.md
 
-/prologue
-  P00-the-ledger-and-the-missing-forty-six.md
-
 /arcs
+  S00-prologue.md
   S01-session-01-opening-investigation.md
   S02-session-02-tbd.md
 
@@ -34,12 +32,12 @@ A modular Markdown workspace for adapting the **Gilded Fracture** D&D campaign i
 
 ## Organization Rule
 
-- The **prologue** is separate because it establishes the whole series premise.
-- Each **campaign session** becomes one arc file.
-- Each arc file contains all webtoon episodes adapted from that session.
-- Detailed episode designs are appended inside the relevant arc file instead of split into many separate episode files.
+- Every major story block is an **arc file**.
+- The **prologue** is Arc `S00`.
+- Each **campaign session** becomes the next arc file: `S01`, `S02`, `S03`, etc.
+- All webtoon episodes live **inside their parent arc file**.
 - The main bible stays readable and global.
 
 ## Deprecated Folder Note
 
-The `/episodes` folder was part of an earlier structure. Going forward, episode designs should live inside their session arc file.
+The `/episodes` and `/prologue` folders were part of earlier structures. Going forward, episode designs should live inside `/arcs`.
