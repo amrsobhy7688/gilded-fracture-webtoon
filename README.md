@@ -9,7 +9,7 @@ A modular Markdown workspace for adapting the **Gilded Fracture** D&D campaign i
 - **Source basis:** Session notes first, not transcripts
 - **Main protagonists:** Vesper Aurelius and Leo Gray
 
-## Folder Structure
+## Current Structure
 
 ```md
 /bible
@@ -20,19 +20,26 @@ A modular Markdown workspace for adapting the **Gilded Fracture** D&D campaign i
   clue-tracker.md
   asset-tracker.md
 
-/arcs
-  A01-faith-and-receipts.md
+/prologue
+  P00-the-ledger-and-the-missing-forty-six.md
 
-/episodes
-  E00-the-ledger-and-the-missing-forty-six.md
-  E01-leo-at-the-tea-house.md
-  E02-vespers-first-day.md
+/arcs
+  S01-session-01-opening-investigation.md
+  S02-session-02-tbd.md
 
 /sources
   source-session-map.md
   glossary-notes.md
 ```
 
-## Working Rule
+## Organization Rule
 
-The main bible stays readable. Detailed episode designs live in their own Markdown files.
+- The **prologue** is separate because it establishes the whole series premise.
+- Each **campaign session** becomes one arc file.
+- Each arc file contains all webtoon episodes adapted from that session.
+- Detailed episode designs are appended inside the relevant arc file instead of split into many separate episode files.
+- The main bible stays readable and global.
+
+## Deprecated Folder Note
+
+The `/episodes` folder was part of an earlier structure. Going forward, episode designs should live inside their session arc file.
