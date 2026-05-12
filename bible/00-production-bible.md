@@ -43,9 +43,7 @@ Turn the campaign into a polished vertical webtoon that feels like:
 
 ---
 
-## 3. Expandable Architecture
-
-Recommended hierarchy:
+## 3. Repo Architecture
 
 ```md
 Gilded Fracture Webtoon Repo
@@ -96,8 +94,6 @@ S01-E01 = Session 1, Episode 1
 S01-E01-S01 = Session 1, Episode 1, Scroll Section 1
 S01-E01-S01-P001 = Session 1, Episode 1, Section 1, Panel 1
 ```
-
-This keeps everything under the arc file structure.
 
 ---
 
@@ -166,30 +162,12 @@ Practical rule:
 
 ---
 
-## 10. Deprecated Structure
-
-The following folders/files are deprecated from earlier structure experiments:
-
-```md
-/prologue
-/episodes
-/arcs/A01-faith-and-receipts.md
-```
-
-Going forward, use only:
-
-```md
-/arcs/S00-prologue.md
-/arcs/S01-session-01-opening-investigation.md
-```
-
----
-
-## 11. Change Log
+## 10. Change Log
 
 ### 2026-05-12
 
 - Created GitHub Markdown workspace.
-- Established expandable architecture.
+- Established clean repo architecture: `bible`, `arcs`, and `sources`.
 - Standardized protagonist name as **Leo Gray**.
 - Updated model: the prologue is Arc `S00`; every campaign session becomes an arc file; episodes are nested inside arc files.
+- Removed deprecated standalone `/prologue`, `/episodes`, and `A01-faith-and-receipts.md` structure.
